@@ -1,14 +1,14 @@
-**_Tạo database_**
+# Tạo database
 
-CREATE DATABASE database_name;
+**CREATE DATABASE** _database_name_;
 
-**_Sử dụng database_**
+# Sử dụng database
 
-USE database_name;
+**USE** _database_name_;
 
-**_Chạy câu truy vấn tiếp theo_**
+# Chạy câu truy vấn tiếp theo
 
-GO
+**GO**
 
 - Mỗi tên DB là duy nhất
 - Đặt tên 1 trong 2 kiểu snake_case hoặc camelCase

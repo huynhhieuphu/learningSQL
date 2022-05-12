@@ -1,23 +1,23 @@
-**_Tạo bảng_**
+# Tạo bảng
 
-CREATE TABLE table_name
+**CREATE TABLE** _table_name_
 (
-column_name data_type ...,
-column_name data_type ...,
-column_name data_type ...,
+column_name data_type ...,<br>
+column_name data_type ...,<br>
+column_name data_type ...,<br>
 ...
 );
 
-**_Xoá bảng_**
+# Xoá bảng
 
-DROP TABLE table_name;
+**DROP TABLE** _table_name_;
 
-**_Xoá hết dữ liệu bảng_**
+# Xoá hết dữ liệu bảngs
 
-TRUNCATE TABLE table_name
+**TRUNCATE TABLE** _table_name_
 
-**_Sửa bảng_**
+# Sửa bảng
 
-- Thêm cột
+## Thêm cột
 
-ALTER TABLE table_name ADD column_name data_type ...;
+**ALTER TABLE** _table_name_ **ADD** _column_name_ _data_type_...;
