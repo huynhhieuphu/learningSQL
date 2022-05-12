@@ -10,5 +10,5 @@ USE database_name;
 
 GO
 
--- Mỗi tên DB là duy nhất
--- Đặt tên 1 trong 2 kiểu snake_case hoặc camelCase
+- Mỗi tên DB là duy nhất
+- Đặt tên 1 trong 2 kiểu snake_case hoặc camelCase
