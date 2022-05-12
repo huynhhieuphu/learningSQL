@@ -1,11 +1,11 @@
 # Tạo bảng
 
 **CREATE TABLE** _table_name_
-(
+(<br>
 column_name data_type ...,<br>
 column_name data_type ...,<br>
 column_name data_type ...,<br>
-...
+...<br>
 );
 
 # Xoá bảng
