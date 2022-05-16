@@ -31,7 +31,7 @@ _- empty : không còn giọt nước trong ly nước_<br>
 _- null : Ly nước chưa từng được đổ nước vào ly_<br>
 _- undefined : không có luôn ly nước, chưa từng được_<br><br>
 
-Một số hàm thường sử dụng<br><br>
+### Một số hàm thường sử dụng
 
 **CURDATE**() : trả về ngày tháng hiện tại (của mysql)<br>
 **DAY**('1987-08-10') : trả về ngày. vd: ngày 10<br>

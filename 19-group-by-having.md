@@ -5,20 +5,19 @@
 **WHERE** _condition_<br>
 **GROUP BY** _column_name(s)_<br>
 **HAVING** _condition_<br>
-**ORDER BY** \_column_name(s);
+**ORDER BY** \_column_name(s);<br><br>
 
-_Lưu ý:_
+_Lưu ý:_<br>
 
-- Lệnh WHERE không được dùng cho Aggregate Funcion
-- HAVING -> giống như WHERE nhưng dành cho GROUP BY
-- HAVING là lệnh điều kiện của GROUP BY
-- HAVING chỉ dùng cho Agreeate function hoặc các cột của GROUP BY
+- Lệnh WHERE không được dùng cho Aggregate Funcion<br>
+- HAVING -> giống như WHERE nhưng dành cho GROUP BY<br>
+- HAVING là lệnh điều kiện của GROUP BY<br>
+- HAVING chỉ dùng cho Agreeate function hoặc các cột của GROUP BY<br><br>
 
-  Ví dụ: Đếm tất cả sản phẩm đã bán dưới 10 cái
-
-  ===============================================================================================
-  === SELECT p.name, COUNT(od.id) AS selled FROM Products AS p INNER JOIN Order_Details AS od ===
-  === ON p.id = od.product_id ===
-  === GROUP BY p.name ===
-  === HAVING COUNT(od.id) < 10; ===
-  ===============================================================================================
+_Ví dụ: Đếm tất cả sản phẩm đã bán dưới 10 cái_
+SELECT p.name, COUNT(od.id) AS selled<br>
+FROM Products AS p<br>
+INNER JOIN Order_Details AS od<br>
+ON p.id = od.product_id<br>
+GROUP BY p.name<br>
+HAVING COUNT(od.id) < 10;
