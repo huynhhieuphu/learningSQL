@@ -1,20 +1,18 @@
 # Tạo bảng
 
-**CREATE TABLE** _table_name_
-(<br>
+**CREATE TABLE** _table_name_ (<br>
 _column_name data_type_ ...,<br>
 _column_name data_type_ ...,<br>
 _column_name data_type_ ...,<br>
-...<br>
-);
+...<br>);
 
 # Xoá bảng
 
 **DROP TABLE** _table_name_;
 
-# Xoá hết dữ liệu bảngs
+# Xoá hết dữ liệu bảng
 
-**TRUNCATE TABLE** _table_name_
+**TRUNCATE TABLE** _table_name_;
 
 # Sửa bảng
 

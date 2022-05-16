@@ -1,94 +1,86 @@
-Truy vấn với điều kiện
+# Truy vấn với điều kiện
 
-Toán tử:
+### Toán tử:
+
 - AND, OR, IN, NOT IN, BETWEEN, NOT BETWEEN, IS NULL, IS NOT NULL
 - =, >, <, >=, <=, <> (Not equal to)
 
-=================================================
-=== SELECT * FROM table_name WHERE condition; ===
-=================================================
+**SELECT** \* **FROM** _table_name_ **WHERE** _condition_;
 
-	Ví dụ: lấy ra nhân viên lơn hơn 40 tuổi
+_Ví dụ: lấy ra nhân viên lơn hơn 40 tuổi_
 
-	====================================================
-	=== SELECT * FROM employees                      ===
-	=== WHERE YEAR(GETDATE()) - YEAR(birthday) > 40; ===
-	====================================================
+SELECT \* FROM employees<br>  
+WHERE YEAR(GETDATE()) - YEAR(birthday) > 40;
 
-		- YEAR() 	-> hàm lấy ra năm
-		- GETDATE()	-> hàm trả ngày tháng năm hiện tại (mssql) === CURDATE() --> (mysql)
+```
+**YEAR()**    : hàm lấy ra năm
+**GETDATE()** : hàm trả ngày-tháng-năm giờ:phút:giây hiện tại (mssql), tương đương **NOW()**: (mysql)
+```
 
-	Ví dụ: lấy ra tên, ngày sinh, tuổi nhân viên nhỏ hơn 40 tuổi
+_Ví dụ: lấy ra tên, ngày sinh, tuổi nhân viên nhỏ hơn 40 tuổi_
 
-	=======================================================================
-	=== SELECT name, birtday, YEAR(GETDATE()) - YEAR(birthday) AS 'age' ===
-	=== FROM employees                                                  ===
-	=== WHERE YEAR(GETDATE()) - YEAR(birthday) < 40;                    ===
-	=======================================================================
+SELECT name, birtday, YEAR(GETDATE()) - YEAR(birthday) AS 'age'<br>
+FROM employees<br>
+WHERE YEAR(GETDATE()) - YEAR(birthday) < 40;<br>
 
-Truy vấn với nhiều điều kiện
+# Truy vấn với nhiều điều kiện
 
-//Thoả mãn 2 điều kiện mới được
-=================================================================
-=== SELECT * FROM table_name WHERE condition1 AND condition2; ===
-=================================================================
+## Thoả mãn 2 điều kiện mới được
 
-	Ví dụ: lấy ra màu sắc liên quan đến sản phẩm đó
+**SELECT** \* **FROM** _table_name_ **WHERE** _condition_1_ **AND** _condition_2_;
 
-	==================================================================
-	=== SELECT p.name AS 'Product', c.name AS 'Color', p.'price'   ===
-	=== FORM products AS p, product_color AS pc, colors AS c.      ===
-	=== WHERE p.id = pc.product_id                                 ===
-	=== AND c.id = pc.color_id                                     ===
-	==================================================================
+_Ví dụ: lấy ra màu sắc liên quan đến sản phẩm đó_
 
-	Ví dụ: lấy số lượng sản phẩm A001 đã bán
+SELECT p.name AS 'Product', c.name AS 'Color', p.'price'<br>
+FORM products AS p, product_color AS pc, colors AS c.<br>
+WHERE p.id = pc.product_id<br>
+AND c.id = pc.color_id<br>
 
-	==================================================
-	=== SELECT COUNT(*) AS 'Sản phẩm A Đã Bán'     ===
-	=== FROM products AS p, order_detail AS od     ===
-	=== WHERE p.id = od.product_id                 ===
-	=== AND p.name = 'A001'                        ===
-	==================================================
+_Ví dụ: lấy số lượng sản phẩm A001 đã bán_
 
-		- Hàm COUNT() trả về số dòng
-			+ COUNT(*)        -> đếm tất cả các dòng
-			+ COUNT(column)   -> đếm số dòng của cột
+SELECT COUNT(\*) AS 'Sản phẩm A Đã Bán'<br>  
+FROM products AS p, order_detail AS od<br>
+WHERE p.id = od.product_id<br>
+AND p.name = 'A001'<br>
 
-//Thoả mãn 1 trong 2 điều kiện đều được
-==============================================================
-=== SELECT * FROM tbl_name WHERE condition1 OR condition2; ===
-==============================================================
+```
+Hàm **COUNT()** trả về số dòng
+- COUNT(*)      : đếm tất cả các dòng
+- COUNT(column) : đếm số dòng của cột
+```
 
-// Cú pháp ngắn gọn hơn lệnh OR => IN
-// IN, NOT IN
-========================================================================
-=== SELECT * FROM tbl_name WHERE col_name IN (val_1, val_2,..val_n); ===
-========================================================================
-https://www.w3schools.com/sql/sql_in.asp
+## Thoả mãn 1 trong 2 điều kiện đều được
 
-// BETWEEN, NOT BETWEEN
-======================================================================
-=== SELECT * FROM tbl_name WHERE col_name BETWEEN val_1 AND val_2; ===
-======================================================================
-https://www.w3schools.com/sql/sql_between.asp
+**SELECT** \* **FROM** _table_name_ **WHERE** _condition_1_ **OR** _condition_2_;
 
-// IS NULL, NOT IS NULL
-==========================================================
-=== SELECT * FROM tbl_name WHERE col_name IS NULL;     ===
-=== SELECT * FROM tbl_name WHERE col_name IS NOT NULL; ===
-==========================================================
-https://www.w3schools.com/sql/sql_null_values.asp
+_Cú pháp ngắn gọn hơn lệnh OR => IN_
 
-BÀI TẬP:
-	1. lấy ra danh mục con thuộc danh mục cha trong bảng categories
+### IN, NOT IN
 
-		===============================================
-		=== SELECT c1.name, c2.name                 ===
-		=== FORM categories AS c1, categories AS c2 ===
-		=== WHERE c1.id = c2.parent_id              ===
-		===============================================
+**SELECT** \* **FROM** _table_name_ **WHERE** _column_name_ **IN** _(value_1, value_2,...)_;
 
+[Tham thảo: SQL IN Operator](https://www.w3schools.com/sql/sql_in.asp)
 
+### BETWEEN, NOT BETWEEN
+
+**SELECT** \* **FROM** _table_name_ **WHERE** _column_name_ **BETWEEN** _value_1_ **AND** _value_2_;
+
+[Tham thảo: SQL BETWEEN Operator](https://www.w3schools.com/sql/sql_between.asp)
+
+### IS NULL, NOT IS NULL
+
+**SELECT** \* **FROM** _table_name_ **WHERE** _column_name_ **IS NULL**;
+**SELECT** \* **FROM** _table_name_ **WHERE** _column_name_ **IS NOT NULL**;
+
+[Tham thảo: SQL NULL Values](https://www.w3schools.com/sql/sql_null_values.asp)
+
+_BÀI TẬP: 1. lấy ra danh mục con thuộc danh mục cha trong bảng categories_
+
+SELECT c1.name, c2.name<br>
+FORM categories AS c1, categories AS c2<br>
+WHERE c1.id = c2.parent_id
+
+```
 ??? Bài toán: lấy ra sản phẩm đã bán ít 10 lần
--> để giải quyết bài toàn dùng Truy vần lồng
+> để giải quyết bài toàn dùng Truy vần lồng
+```
