@@ -5,7 +5,7 @@
 **WHERE** _condition_<br>
 **GROUP BY** _column_name(s)_<br>
 **HAVING** _condition_<br>
-**ORDER BY** \_column_name(s);<br><br>
+**ORDER BY** _column_name(s)_;<br><br>
 
 _Lưu ý:_<br>
 

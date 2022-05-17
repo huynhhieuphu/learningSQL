@@ -10,39 +10,39 @@
 ### Cách 1:
 
 **CREATE TABLE** _table_name_(<br>
-id INT PRIMARY KEY<br>
+_id_ **INT PRIMARY KEY**<br>
 );
 
 ### Cách 2:
 
 **CREATE TABLE** _table_name_(<br>
-id INT NOT NULL,<br>
-PRIMARY KEY(id)<br>
+_id_ **INT NOT NULL,**<br>
+**PRIMARY KEY**(_id_)<br>
 );
 
 ### Cách 3: CONSTRAINT - đặt tên cho ràng buộc khoá chính -> dễ quản lý các tên ràng buộc
 
 **CREATE TABLE** _table_name_(<br>
-id INT NOT NULL,<br>
-CONSTRAINT constraint_pk_name PRIMARY KEY(id)<br>
+_id_ **INT NOT NULL,**<br>
+**CONSTRAINT** _constraint_pk_name_ **PRIMARY KEY**(_id_)<br>
 );
 
 ## Trường hợp: Khi đã tạo bảng, rồi xác định cột nào thành PRIMARY KEY
 
 ### Cách 1:
 
-**ALTER TABLE** _table_name_ **ADD PRIMARY KEY**(id);
+**ALTER TABLE** _table_name_ **ADD PRIMARY KEY**(_id_);
 
 ### Cách 2: CONSTRAINT - đặt tên cho ràng buộc khoá chính
 
-**ALTER TABLE** _table_name_ **ADD CONSTRAINT** _constraint_pk_name_ **PRIMARY KEY**(id);
+**ALTER TABLE** _table_name_ **ADD CONSTRAINT** _constraint_pk_name_ **PRIMARY KEY**(_id_);
 
 ## Trường hợp: Thiết lập 2 cột thành PRIMARY KEY
 
 **CREATE TABLE** _table_name_(<br>
-pk_id1 INT NOT NULL,<br>
-pk_id2 INT NOT NULL,<br>
-PRIMARY KEY(pk_id1, pk_id2)<br>
+_pk_id1_ **INT NOT NULL,**<br>
+_pk_id2_ **INT NOT NULL,**<br>
+**PRIMARY KEY**(_pk_id1, pk_id2_)<br>
 );
 
 ### Huỷ khoá chính

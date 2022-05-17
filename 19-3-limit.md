@@ -2,8 +2,8 @@
 
 ## MSSQL
 
-**SELECT TOP** _number_|**_percent_** _column_name(s)<br>
-**FROM** \_table_name_<br>
+**SELECT TOP** _number_|**_percent_** _column_name(s)_<br>
+**FROM** _table_name_<br>
 **WHERE** _condition_;
 
 ## MYSQL

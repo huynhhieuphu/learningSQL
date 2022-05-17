@@ -1,10 +1,10 @@
 # Tạo bảng
 
 **CREATE TABLE** _table_name_ (<br>
-_column_name data_type_ ...,<br>
-_column_name data_type_ ...,<br>
-_column_name data_type_ ...,<br>
-...<br>);
+_column_name data_type..._,<br>
+_column_name data_type..._,<br>
+_column_name data_type..._,<br>
+_..._<br>);
 
 # Xoá bảng
 

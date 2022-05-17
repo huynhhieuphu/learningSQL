@@ -2,12 +2,12 @@
 
 ## Thêm dữ liệu vào bảng
 
-**INSERT INTO** _table_name(column1, column2,... )_<br>
+**INSERT INTO** _table_name_(_column1, column2,..._)<br>
 **VALUES** _(value1, value2,... )_;
 
 ## Thêm nhiều dữ liệu vào bảng
 
-**INSERT INTO** _table_name(column1, column2,... )_<br>
+**INSERT INTO** _table_name_(_column1, column2,..._)<br>
 **VALUES** _(value1, value2,... ),_<br>
 _(value1, value2,... ),_<br>
 _(value1, value2,... ),_;
