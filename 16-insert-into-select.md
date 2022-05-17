@@ -5,12 +5,15 @@
 
 **INSERT INTO SELECT** _clone_table_<br> **FROM** _table_name_;
 
-_Ví dụ:_
+_Ví dụ: mysql_
 
-1. Bước 1: clone ra 1 bảng mới
-
-**SELECT** _column(s)_ **INTO** _clone_table_ **FROM** _table_name_;
-
-2. Bước 2: copy dữ liệu sang 1 bảng mới clone
-
-**INSERT INTO SELECT** _clone_table_ **FROM** _table_name_;
+- Bước 1: tạo bảng cần sao chép<br><br>
+  **create table** _clone_animals_live_(<br>
+  **id int not null auto_increment**,<br>
+  _`name`_ **varchar(255) not null**,<br>
+  **primary key**(id)<br>
+  )<br><br>
+- Bước 2: sao chép dữ liệu sang bảng mới<br><br>
+  **insert into** _clone_animals_live_(_`name`, id_)<br>
+  **select distinct** _live_ **as** _`name`_, _null_ **as** _id_<br>
+  **from** _animals_;<br><br>
