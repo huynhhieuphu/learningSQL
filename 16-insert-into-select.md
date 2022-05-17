@@ -1,24 +1,16 @@
-INSERT INTO SELECT
-- dùng để copy dữ liệu bảng sang 1 bảng khác đã tồn tại.
-- điều kiện copy -> tên và kiểu dữ liệu cột phải tương đồng
+# INSERT INTO SELECT
 
-======================================
-=== INSERT INTO SELECT clone_table ===
-=== FROM table_name;               ===
-======================================
+> dùng để copy dữ liệu bảng sang 1 bảng khác đã tồn tại.
+> điều kiện copy -> tên và kiểu dữ liệu cột phải tương đồng
 
-	Ví dụ:
+**INSERT INTO SELECT** _clone_table_<br> **FROM** _table_name_;
 
-	Bước 1: clone ra 1 bảng mới
+_Ví dụ:_
 
-	=========================================
-	=== SELECT column(s) INTO clone_table ===
-	=== FROM table_name;                  ===
-	=========================================
+1. Bước 1: clone ra 1 bảng mới
 
-	Bước 2: copy dữ liệu sang 1 bảng mới clone
+**SELECT** _column(s)_ **INTO** _clone_table_ **FROM** _table_name_;
 
-	======================================
-	=== INSERT INTO SELECT clone_table ===
-	=== FROM table_name;               ===
-	======================================
+2. Bước 2: copy dữ liệu sang 1 bảng mới clone
+
+**INSERT INTO SELECT** _clone_table_ **FROM** _table_name_;
