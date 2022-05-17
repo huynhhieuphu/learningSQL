@@ -1,29 +1,22 @@
-Insert, Delete, Update Table
+# Insert, Delete, Update Table
 
-***Thêm dữ liệu vào bảng***
+## Thêm dữ liệu vào bảng
 
-=====================================================
-=== INSERT INTO table_name(column1, column2,... ) ===
-=== VALUES (value1, value2,... );                 ===
-=====================================================
+**INSERT INTO** _table_name(column1, column2,... )_<br>
+**VALUES** _(value1, value2,... )_;
 
-***Thêm nhiều dữ liệu vào bảng***
-=====================================================
-=== INSERT INTO table_name(column1, column2,... ) ===
-=== VALUES (value1, value2,... ),                 ===
-=== (value1, value2,... ),                        ===
-=== (value1, value2,... );                        ===
-=====================================================
+## Thêm nhiều dữ liệu vào bảng
 
-***Xoá dữ liệu trong bảng***
+**INSERT INTO** _table_name(column1, column2,... )_<br>
+**VALUES** _(value1, value2,... ),_<br>
+_(value1, value2,... ),_<br>
+_(value1, value2,... ),_;
 
-==========================================
-=== DELETE table_name WHERE condition; ===
-==========================================
+## Xoá dữ liệu trong bảng
 
-***Cập nhật dữ liệu trong bảng***
+**DELETE** _table_name_ **WHERE** _condition_;
 
-=====================================================================
-=== UPDATE table_name SET column1 = value1, column2 = value2,...  ===
-=== WHERE condition;                                              ===
-=====================================================================
+## Cập nhật dữ liệu trong bảng
+
+**UPDATE** _table_name_ **SET** _column1 = value1, column2 = value2,..._<br>
+**WHERE** _condition_;

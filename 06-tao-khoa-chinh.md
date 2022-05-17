@@ -1,67 +1,50 @@
-***Tạo khoá chính***
+# Tạo khoá chính
 
-PRIMARY KEY : dùng cho 1 (hoặc nhiều) cột không được phép trùng và không null
+**PRIMARY KEY** : dùng cho 1 (hoặc nhiều) cột không được phép trùng và không null<br><br>
 
-Sự khác nhau giữa PRIMARY KEY và UNIQUE:
-- UNIQUE : tránh trùng, duy nhất + được phép NULL
-- PRIMARY KEY : UNIQUE + NOT NULL
+**_Sự khác nhau giữa PRIMARY KEY và UNIQUE:_**<br>
 
-Cách 1:
+- UNIQUE : tránh trùng, duy nhất + được phép NULL<br>
+- PRIMARY KEY : UNIQUE + NOT NULL<br><br>
 
-================================
-=== CREATE TABLE table_name  ===
-=== (                        ===
-===   id INT PRIMARY KEY     ===
-=== );                       ===
-================================
+### Cách 1:
 
-Cách 2:
+**CREATE TABLE** _table_name_(<br>
+id INT PRIMARY KEY<br>
+);
 
-================================
-=== CREATE TABLE table_name  ===
-=== (                        ===
-===   id INT NOT NULL,       ===
-===   PRIMARY KEY(id)        ===
-=== );                       ===
-================================
+### Cách 2:
 
-Cách 3: CONSTRAINT - đặt tên cho ràng buộc khoá chính -> dễ quản lý các tên ràng buộc
+**CREATE TABLE** _table_name_(<br>
+id INT NOT NULL,<br>
+PRIMARY KEY(id)<br>
+);
 
-=======================================================
-=== CREATE TABLE table_name                	        ===
-=== (                                               ===
-===   id INT NOT NULL,                              ===
-===   CONSTRAINT constraint_pk_name PRIMARY KEY(id) ===
-=== );                                              ===
-=======================================================
+### Cách 3: CONSTRAINT - đặt tên cho ràng buộc khoá chính -> dễ quản lý các tên ràng buộc
 
-- Trường hợp: Khi đã tạo bảng, rồi xác định cột nào thành PRIMARY KEY
+**CREATE TABLE** _table_name_(<br>
+id INT NOT NULL,<br>
+CONSTRAINT constraint_pk_name PRIMARY KEY(id)<br>
+);
 
-Cách 1:
+## Trường hợp: Khi đã tạo bảng, rồi xác định cột nào thành PRIMARY KEY
 
-===================================================
-=== ALTER TABLE table_name ADD PRIMARY KEY(id); ===
-===================================================
+### Cách 1:
 
-Cách 2: CONSTRAINT - đặt tên cho ràng buộc khoá chính
+**ALTER TABLE** _table_name_ **ADD PRIMARY KEY**(id);
 
-=================================================================================
-=== ALTER TABLE table_name ADD CONSTRAINT constraint_pk_name PRIMARY KEY(id); ===
-=================================================================================
+### Cách 2: CONSTRAINT - đặt tên cho ràng buộc khoá chính
 
-- Trường hợp: Thiết lập 2 cột thành PRIMARY KEY
+**ALTER TABLE** _table_name_ **ADD CONSTRAINT** _constraint_pk_name_ **PRIMARY KEY**(id);
 
-=====================================
-=== CREATE TABLE table_name       ===
-=== (                             ===
-===   pk_id1 INT NOT NULL,        ===
-===   pk_id2 INT NOT NULL,        ===
-===   PRIMARY KEY(pk_id1, pk_id2) ===
-=== );                            ===
-=====================================
+## Trường hợp: Thiết lập 2 cột thành PRIMARY KEY
 
-***Huỷ khoá chính***
+**CREATE TABLE** _table_name_(<br>
+pk_id1 INT NOT NULL,<br>
+pk_id2 INT NOT NULL,<br>
+PRIMARY KEY(pk_id1, pk_id2)<br>
+);
 
-=================================================================
-=== ALTER TABLE table_name DROP CONSTRAINT constraint_pk_name ===
-=================================================================
+### Huỷ khoá chính
+
+**ALTER TABLE** _table_name_ **DROP CONSTRAINT** _constraint_pk_name_
