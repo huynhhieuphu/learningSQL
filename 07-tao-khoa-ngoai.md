@@ -1,9 +1,9 @@
 # Tạo khoá ngoại
 
-> Điều kiện để tạo khoá ngoại
+> Điều kiện để tạo khoá ngoại<br>
 >
-> - Tham chiếu tới khoá chính
-> - cùng kiểu dữ liệu
+> - Tham chiếu tới khoá chính<br>
+> - cùng kiểu dữ liệu<br>
 
 ### Ưu điểm
 

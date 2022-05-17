@@ -1,6 +1,6 @@
 # INSERT INTO SELECT
 
-> dùng để copy dữ liệu bảng sang 1 bảng khác đã tồn tại.
+> dùng để copy dữ liệu bảng sang 1 bảng khác đã tồn tại.<br>
 > điều kiện copy -> tên và kiểu dữ liệu cột phải tương đồng
 
 **INSERT INTO SELECT** _clone_table_<br> **FROM** _table_name_;

@@ -10,5 +10,5 @@
 
 **GO**
 
-> Mỗi tên DB là duy nhất
+> Mỗi tên DB là duy nhất<br>
 > Đặt tên 1 trong 2 kiểu snake_case hoặc camelCase
