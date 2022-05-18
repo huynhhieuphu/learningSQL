@@ -1,40 +1,35 @@
-***FULL OUTER JOIN*** 
-- Lấy ra tất cả dữ liệu khoả mãn điều kiện và không khoả mãn điều kiện
+# FULL OUTER JOIN (MSSQL)
 
-===========================================
-=== SELECT column1, column2,...         ===
-=== FROM table1 INNER OUTER JOIN table2 ===
-=== ON table1.id = table2.id            ===     
-===========================================
+> Lấy ra tất cả dữ liệu khoả mãn điều kiện và không khoả mãn điều kiện<br><br>
 
-- lưu ý: bên bảng nào không khoả mãn điều kiện sẽ để NULL. 
+**SELECT** _column(s)_<br>
+**FROM** _table_1_ **INNER OUTER JOIN** _table_2_
+**ON** _table_1.id_ **=** _table_2.id_
 
-	Ví dụ: 
+> Lưu ý: bên bảng nào không khoả mãn điều kiện sẽ để NULL. <br><br>
 
-	=======================================================
-	=== SELECT p.name, b.name, p.price                  ===
-	=== FROM products AS p INNER OUTER JOIN brands AS b ===
-	=== ON p.id = p.brand_id                            ===
-	=======================================================
+### Ví dụ:
 
+SELECT p.name, b.name, p.price<br>
+FROM products AS p INNER OUTER JOIN brands AS b<br>
+ON p.id = p.brand_id<br>
 
-***CROSS JOIN*** 
-- Tổ hợp, mỗi dòng record của bảng A với tất cả record của bảng B (tương tự INNER JOIN)
-	
-	Tổ hợp của 2 bảng, dữ liệu bảng
-	bảng A: 1,2,3
-	bảng B: x,y
+# CROSS JOIN (MSSQL - MYSQL)
 
-	Kết quả:
-			1-x
-			2-x
-			3-x
-			1-y
-			2-y
-			3-y
+Tổ hợp, mỗi dòng record của bảng A với tất cả record của bảng B (tương tự INNER JOIN)<br><br>
 
-=====================================
-=== SELECT column1, column2,...   ===
-=== FROM table1 CROSS JOIN table2 ===
-=== ON table1.id = table2.id      ===     
-=====================================
+Tổ hợp của 2 bảng, dữ liệu bảng<br>
+
+- bảng A: 1,2,3<br>
+- bảng B: x,y<br><br>
+  Kết quả:<br>
+  1-x<br>
+  2-x<br>
+  3-x<br>
+  1-y<br>
+  2-y<br>
+  3-y<br><br><br>
+
+**SELECT** _column(s)_
+**FROM** _table_1_ **CROSS JOIN** _table_2_
+**ON** _table_1.id_ **=** _table_2.id_

@@ -1,35 +1,26 @@
-INNER JOIN -> lấy ra dữ liệu khoả mãn điều kiện
+# INNER JOIN -> lấy ra dữ liệu khoả mãn điều kiện
 
-- Mọi inner join đều cần điều kiện
+> Mọi inner join đều cần điều kiện<br>
+> inner join --> kiểu kết hợp có điều kiện (trong bài lesson 08) --> sau này có thể không hỗ trợ<br><br>
 
-- inner join -> kiểu kết hợp có điều kiện (trong bài lesson 08) -> sau này có thể không hỗ trợ
+**SELECT** _column(s)_
+**FROM** _table_1_, _table_2_
+**WHERE** _table_1.id_ **=** _table_2.id_<br><br>
 
-===================================
-=== SELECT column1, column2,... ===
-=== FROM table1, table2         ===
-=== WHERE table1.id = table2.id ===     
-===================================
+> inner join --> kiểu mới --> Đúng chuẩn (khuyên dùng)<br><br>
 
-- inner join -> kiểu mới -> Đúng chuẩn (khuyên dùng)
+**SELECT** _column(s)_
+**FROM** _table_1_ **INNER JOIN** _table_2_
+**ON** _table_1.id_ **=** _table_2.id_
 
-=====================================
-=== SELECT column1, column2,...   ===
-=== FROM table1 INNER JOIN table2 ===
-=== ON table1.id = table2.id      ===     
-=====================================
-	
-	Ví dụ: lấy ra tên sp, tên nhãn hàng, giá sp tương ứng
+### Ví dụ: lấy ra tên sp, tên nhãn hàng, giá sp tương ứng
 
-	=================================================
-	=== SELECT p.name, b.name, p.price            ===
-	=== FROM products AS p INNER JOIN brands AS b ===
-	=== ON p.brand_id = b.id                      ===
-	=================================================
+SELECT p.name, b.name, p.price<br>  
+FROM products AS p INNER JOIN brands AS b<br>
+ON p.brand_id = b.id<br>
 
-- Viết tắt INNER JOIN -> JOIN
+## Viết tắt INNER JOIN -> JOIN
 
-===================================
-=== SELECT column1, column2,... ===
-=== FROM table1 JOIN table2.    ===
-=== ON table1.id = table2.id    ===     
-===================================
+**SELECT** _column(s)_
+**FROM** _table_1_ **JOIN** _table_2_
+**ON** _table_1.id_ **=** _table_2.id_
