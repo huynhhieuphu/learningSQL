@@ -1,4 +1,4 @@
-# Truy vấn lồng (Sub Query)
+# Truy vấn lồng (Subqueries)
 
 ## Truy vấn lồng trong WHERE
 
