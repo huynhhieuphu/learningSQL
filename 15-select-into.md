@@ -1,38 +1,29 @@
-SELECT INTO
+# SELECT INTO
 
-- dùng để backup bảng, tạo ra nhiều bản sao đều được
+> dùng để backup bảng(Tạo ra nhiều bản sao đều được)
 
-==============================================
-=== SELECT column_name(s) INTO clone_table ===
-=== FROM table_name ===
-==============================================
-Ví dụ: Sao chép 1 bảng mới với bảng có sẵn
+**SELECT** _column_name(s)_ **INTO** _clone_table_<br>
+**FROM** _table_name_
 
-    ====================================
-    === SELECT * INTO clone_product1 ===
-    === FROM products;               ===
-    ====================================
+### Ví dụ: Sao chép 1 bảng mới với bảng có sẵn
 
-    Ví dụ: Sao chép 1 bảng mới với các cột chỉ định
+SELECT \* INTO clone_product<br>
+FROM products;
 
-    =======================================================
-    === SELECT column1, column2,... INTO clone_product2 ===
-    === FROM products;                                  ===
-    =======================================================
+### Ví dụ: Sao chép 1 bảng mới với các cột chỉ định
 
-    Ví dụ: Sao chép 1 bảng mới với điều kiện
+SELECT column_1, column_2,... INTO clone_product<br>
+FROM products;
 
-    =======================================================
-    === SELECT column1, column2,... INTO clone_product3 ===
-    === FROM products WHERE price < 10000000;           ===
-    =======================================================
+### Ví dụ: Sao chép 1 bảng mới với điều kiện
 
-    Ví dụ: Sao chép 1 bảng mới với 2 hoặc nhiều bảng
+SELECT column_1, column_2,... INTO clone_product<br>
+FROM products WHERE price < 10000000;
 
-    =======================================================
-    === SELECT column1, column2,... INTO clone_product4 ===
-    === FROM products AS p, brands AS b                 ===
-    === WHERE p.brand_id = b.id;                        ===
-    =======================================================
+### Ví dụ: Sao chép 1 bảng mới với 2 hoặc nhiều bảng
 
-    Có thể tạo ra 1 bảng mới không có dữ liệu từ điều kiện sai.
+SELECT column_1, column_2,... INTO clone_product<br>
+FROM products AS p, brands AS b<br>
+WHERE p.brand_id = b.id;<br>
+
+> Có thể tạo ra 1 bảng mới không có dữ liệu từ điều kiện sai.
